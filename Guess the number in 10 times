@@ -1,0 +1,51 @@
+//Day2 Review C
+//20220126 芜
+//
+#include <stdio.h>
+#include <stdlib.h>
+// std=standard i=input o=output h=head 包含标准输入输出的头文件
+// #include <math.h>
+
+
+
+
+int main(void)
+{
+    int random;
+    random = rand() % 100; //做个随机数
+    int number;
+    int i;
+
+    printf("10次之内能猜到算你牛(<100)\n");
+
+    for (i = 0; i < 10; i++) {
+
+    scanf_s("%d", &number);
+
+    if (random > number) {
+
+        printf("小了\n");
+
+    }
+
+    else if (random < number) {
+
+        printf("大了\n");
+
+    }
+
+    else {
+
+        printf("牛\n");
+
+    }
+    }
+
+    if(i=9) {
+    
+        printf("你无了，辣鸡！\n");
+
+    }
+
+    return 0;
+}
