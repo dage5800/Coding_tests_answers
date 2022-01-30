@@ -1,0 +1,28 @@
+//Day6 Review C
+//20220130 By Q. Sun
+//输出一个好看的二维数组 
+#include <stdio.h>
+// #include <stdlib.h>
+// #include <math.h>
+
+
+int main(void)
+{
+	int coordinate[3][4] = { 
+	{0, 1, 2, 3} ,
+	{4, 5, 6, 7} ,
+	{8, 9, 10, 11}
+	};
+
+	for (int i = 0; i <= 2; i++) {
+		for (int j = 0; j <= 3; j++) {
+			if(j==3) {
+				printf("%d\n", coordinate[i][j]);
+			}
+			else
+				printf("%d  ", coordinate[i][j]);
+		}
+	}
+
+	return 0;
+}
