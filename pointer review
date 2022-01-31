@@ -1,0 +1,23 @@
+//Day7 Review C
+//20220131 By Q. Sun
+//pointer XD 
+#include <stdio.h>
+// #include <stdlib.h>
+// #include <math.h>
+
+
+int main(void)
+{
+	int value = 7;
+
+	int* ptr = &value;
+
+	int* empty_ptr = NULL; 
+
+	printf("value address = %p\n", &value); //output address of value
+	printf("value address = %p\n", ptr); //output address of value
+	printf("value = %d\n", *ptr); //get value
+	printf("empty_ptr = %p\n", empty_ptr); //output empty pointer
+
+	return 0;
+}
