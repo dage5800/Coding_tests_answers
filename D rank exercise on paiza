@@ -1,0 +1,26 @@
+//Day9 Review C
+//20220201 By Q. Sun
+//exercise on paiza
+#include <stdio.h>
+
+
+
+int main(void) {
+  
+#define unit_price 25
+#define time 24
+
+    int watt_number;
+
+    scanf_s("%d", &watt_number);
+
+    int sum_price = unit_price * time * watt_number;
+        
+    if (watt_number > 10 || watt_number < 0) {
+        printf("please input a legel watt number\n");
+        }
+    else
+        printf("the sum price is %d\n", sum_price);
+
+    return 0;
+}
