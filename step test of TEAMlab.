@@ -1,0 +1,44 @@
+//Day10 Review C
+//20220202 By Q. Sun
+//step test of TEAMlab.
+#include <stdio.h>
+#include <math.h>
+#include <string.h>
+
+int main(void) {
+
+    int SUM = 0;
+
+    for (int i = 0;i <= 30000;i++) {
+
+        if (i % 3 == 0) {
+            SUM += i;
+        }
+        else if (i % 10 == 3) {
+            SUM += i;
+        }
+        else if ((i / 10) % 10 == 3) {
+            SUM += i;
+        }
+        else if ((i / 100) % 10 == 3) {
+            SUM += i;
+        }
+        else if ((i / 1000) % 10 == 3) {
+            SUM += i;
+        }
+        else if ((i / 10000) % 10 == 3) {
+            SUM += i;
+        }
+        else
+            continue;
+    }
+
+    printf("%d\n", SUM);
+
+    return 0;
+
+}
+
+
+
+
