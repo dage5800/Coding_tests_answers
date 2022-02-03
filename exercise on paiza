@@ -1,0 +1,35 @@
+//Day11 Review C
+//20220203 By Q. Sun
+//exercise on paiza.
+#include <stdio.h>
+
+int main(void) {
+
+	int N = 0, X = 0, Y = 0;
+
+	scanf_s("%d%d%d", &N, &X, &Y);
+
+	for (int i = 1;i <= N; i++) {
+
+		if (N > 1000 || X < 1 || Y > N) {
+			break;
+		}
+		else if (i % X == 0 && i % Y == 0) {
+			printf("AB\n");
+		}
+		else if (i % X == 0) {
+			printf("A\n");
+		}
+		else if (i % Y == 0) {
+			printf("B\n");
+		}
+		else
+			printf("N\n");
+	}
+	return 0;
+
+}
+
+
+
+
