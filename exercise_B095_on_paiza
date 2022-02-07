@@ -1,0 +1,155 @@
+#include<stdio.h>
+#include<iostream>
+#include<cmath>
+// #include<iostream.h>
+using namespace std;
+
+int max(int SUM[], int N)
+{
+	int maxValue = SUM[0];
+
+	for (int k = 1; k < N; k++)
+	{
+		if (SUM[k] > maxValue)
+		{
+			maxValue = SUM[k];
+		}
+	}
+
+	return maxValue;
+}
+
+int main(void)
+{
+	int N, M;
+
+	cin >> N >> M;
+
+	int SUM[10] = { 0 };
+	int a[50] = { 0 };
+	int h[10][50] = { 0 };
+
+
+	for (int j = 0;j < M;j++) {
+
+		cin >> a[j];
+
+	}
+	for (int i = 0;i < N;i++) {
+		for (int j = 0;j < M;j++) {
+
+			cin >> h[i][j];
+
+			switch (abs(a[j] - h[i][j]))
+			{
+			case 0:
+				SUM[i] -= 0;
+				break;
+			case 1:
+				SUM[i] -= 0;
+				break;
+			case 2:
+				SUM[i] -= 0;
+				break;
+			case 3:
+				SUM[i] -= 0;
+				break;
+			case 4:
+				SUM[i] -= 0;
+				break;
+			case 5:
+				SUM[i] -= 0;
+				break;
+			case 6:
+				SUM[i] -= 1;
+				break;
+			case 7:
+				SUM[i] -= 1;
+				break;
+			case 8:
+				SUM[i] -= 1;
+				break;
+			case 9:
+				SUM[i] -= 1;
+				break;
+			case 10:
+				SUM[i] -= 1;
+				break;
+			case 11:
+				SUM[i] -= 2;
+				break;
+			case 12:
+				SUM[i] -= 2;
+				break;
+			case 13:
+				SUM[i] -= 2;
+				break;
+			case 14:
+				SUM[i] -= 2;
+				break;
+			case 15:
+				SUM[i] -= 2;
+				break;
+			case 16:
+				SUM[i] -= 2;
+				break;
+			case 17:
+				SUM[i] -= 2;
+				break;
+			case 18:
+				SUM[i] -= 2;
+				break;
+			case 19:
+				SUM[i] -= 2;
+				break;
+			case 20:
+				SUM[i] -= 2;
+				break;
+			case 21:
+				SUM[i] -= 3;
+				break;
+			case 22:
+				SUM[i] -= 3;
+				break;
+			case 23:
+				SUM[i] -= 3;
+				break;
+			case 24:
+				SUM[i] -= 3;
+				break;
+			case 25:
+				SUM[i] -= 3;
+				break;
+			case 26:
+				SUM[i] -= 3;
+				break;
+			case 27:
+				SUM[i] -= 3;
+				break;
+			case 28:
+				SUM[i] -= 3;
+				break;
+			case 29:
+				SUM[i] -= 3;
+				break;
+			case 30:
+				SUM[i] -= 3;
+				break;
+			default:
+				SUM[i] -= 5;
+				break;
+			}
+
+		}
+	}
+
+	if((100 + max(SUM, N)) >= 0){
+		cout << 100 + max(SUM, N) << endl;
+	}
+	else
+		cout << 0 << endl;
+
+	return 0;
+}
+
+
