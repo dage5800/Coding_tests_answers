@@ -1,0 +1,85 @@
+#include<iostream>
+//#include<cmath>
+//#include<iostream.h>
+using namespace std;
+
+int max(int SUM[], int N)
+{
+	int maxValue = SUM[0];
+
+	for (int k = 1; k < N; k++)
+	{
+		if (SUM[k] > maxValue)
+		{
+			maxValue = SUM[k];
+		}
+	}
+
+	return maxValue;
+}
+
+int main(void)
+{
+	int N = 0, M = 0;
+	int p[10][10] = { 0 }; //本体
+	int p_condition[10][10] = {0};//条件
+
+	cin >> N >> M;
+
+	for (int i = 0;i < N;i++) {
+		for (int j = 0;j < N;j++) {
+
+			cin >> p[i][j];
+			if (p[i][j] >= M || p[i][j] > 1000){
+				p_condition[i][j] = 1;
+			}
+			else{
+				p_condition[i][j] = 0;
+			}
+		}
+	}
+
+	int p_condition_j[10] = { 0 };
+
+	for (int j = 0;j < N;j++) {
+		for (int i = 0;i < N;i++) {
+
+			p_condition_j[j] += p_condition[i][j];
+			
+		}
+	}
+	
+	int final_sum = 0;
+
+	for (int j = 0;j < N;j++) {
+		
+		if (p_condition_j[j] != 0) {
+			final_sum++;
+		}
+		else
+			continue;
+	}
+
+	for (int j = 0;j < N;j++) {
+		if (p_condition_j[j] == 0) {
+			if (j != N - 1) {
+				cout << j + 1 << " ";
+			}
+			else {
+				cout << j + 1;
+			}
+		}
+		else
+			continue;
+	}
+
+	if (final_sum == N) {
+		cout << "wait" << endl;
+	}
+
+
+
+	return 0;
+}
+
+
