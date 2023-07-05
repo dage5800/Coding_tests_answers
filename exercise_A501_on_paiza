@@ -1,0 +1,23 @@
+def calculate_max_score(H, W, board):
+    dp = [[0] * W for _ in range(H)]
+
+    # inital the last row
+    dp[H-1] = board[H-1]
+
+    # DP
+    for i in range(H-2, -1, -1):
+        for j in range(W):
+            dp[i][j] = board[i][j] + max(dp[i+1][max(0, j-1)], dp[i+1][j], dp[i+1][min(W-1, j+1)])
+
+    return max(dp[0])
+
+# input
+H, W = map(int, input().split())
+board = []
+for _ in range(H):
+    row = list(map(int, input().split()))
+    board.append(row)
+
+# output
+max_score = calculate_max_score(H, W, board)
+print(max_score)
